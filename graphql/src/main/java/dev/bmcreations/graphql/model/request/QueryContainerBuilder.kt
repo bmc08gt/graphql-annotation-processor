@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 
 @Parcelize
-class QueryContainerBuilder(var container: QueryContainer? = QueryContainer()) : Parcelable {
+open class QueryContainerBuilder(private val container: QueryContainer? = QueryContainer()) : Parcelable {
 
     fun setQuery(query: String): QueryContainerBuilder {
         container?.query = query
